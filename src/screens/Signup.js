@@ -1,6 +1,9 @@
 import React from 'react';
-import Header from '../components/Header';
 
-const Signup = () => <Header title="Signup" />;
+const Signup = () => (
+  <div>
+    
+  </div>
+);
 
 export default Signup;
