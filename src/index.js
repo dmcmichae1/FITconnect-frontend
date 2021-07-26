@@ -1,43 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 import Home from './screens/Home';
-import Admin from './screens/Admin';
-import Login from './screens/Login';
-import Signup from './screens/Signup';
 import Trainers from './screens/Trainers';
-import Users from './screens/Users';
+import Signup from './screens/Signup';
+import Login from './screens/Login';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-const Index = ({ pathname }) => {
-  switch (pathname) {
-    case '/admin':
-      return <Admin />;
-      case '/login':
-      return <Login />;
-    case '/signup':
-      return <Signup />;
-      case '/trainers':
-      return <Trainers />;
-      case '/users':
-      return <Users />;
-    default:
-      return <Home />;
-  }
-};
+const App = () => (
+  <Router>
+    <div>
+    <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/trainers">Trainers</Link>
+        </li>
+        <li>
+          <Link to="/signup">Signup</Link>
+        </li>
+        <li>
+          <Link to="/login">Login</Link>
+        </li>
+      </ul>
 
-let pathname = window.location.pathname;
+      <hr />
 
-ReactDOM.render(<Index pathname={pathname} />, document.getElementById('root'));
+      <Route exact path="/" component={Home} />
+      <Route path="/trainers" component={Trainers} />
+      <Route path="/signup" component={Signup} />
+      <Route path="/login" component={Login} />
+    </div>
+  </Router>
+);
 
-window.addEventListener('popstate', () => {
-  pathname = window.location.pathname;
-});
-
-  
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(<App />, document.getElementById('root'));
