@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Signup = () => (
+const Trainer = () => (
     <div class="topnav" id="myTopnav">
     <a href="/home" >Home</a>
   <a href="/login">Login</a>
@@ -12,4 +12,4 @@ const Signup = () => (
   </div>
 );
 
-export default Signup;
+export default Trainer;
