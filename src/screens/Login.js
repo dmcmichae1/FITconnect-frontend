@@ -1,16 +1,42 @@
-import React from 'react';
+import React, {Component} from 'react';
+import Navbar from '../components/Navbar';
 
-const Login = () => (
-    <div class="topnav" id="myTopnav">
-    <a href="/home" >Home</a>
-  <a href="/login" >Login</a>
-  <a href="/signup" >Signup</a>
-  <a href="/trainer">Trainer</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-  </div>
-  
-);
 
-export default Login;
+
+
+export default class Login extends Component {
+  render() {
+      return (
+          <form>
+              <Navbar></Navbar>
+              <h3>Sign In</h3>
+
+              <div className="form-group">
+                  <label>Email address</label>
+                  <input type="email" className="form-control" placeholder="Enter email" />
+              </div>
+
+              <div className="form-group">
+                  <label>Password</label>
+                  <input type="password" className="form-control" placeholder="Enter password" />
+              </div>
+
+              <div className="form-group">
+                  <div className="custom-control custom-checkbox">
+                      <input type="checkbox" className="custom-control-input" id="customCheck1" />
+                      <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
+                  </div>
+              </div>
+
+              <button type="submit" className="btn btn-primary btn-block">Submit</button>
+              <p className="forgot-password text-right">
+                  Forgot <a href="#">password?</a>
+              </p>
+          </form>
+      );
+  }
+}
+
+
+
+

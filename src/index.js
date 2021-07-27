@@ -10,7 +10,6 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 const App = () => (
   <Router>
     <div>
-    
       <Route exact path="/" component={Home} />
       <Route path="/trainer" component={Trainer} />
       <Route path="/signup" component={Signup} />
