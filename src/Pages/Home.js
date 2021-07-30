@@ -5,7 +5,6 @@ import myImage from '../image/fitconnect4.jpeg';
 
 
 
-
 const Home = () => (
   
 
@@ -16,8 +15,6 @@ const Home = () => (
        <div class="btn-group">
             <button type="button" class="btn btn-primary btn-lg">Login</button> 
             <button type="button" class="btn btn-primary btn-lg">Signup</button> 
-
-          
               
               </div>
               <img src={myImage} alt="" />
@@ -33,3 +30,4 @@ const Home = () => (
 );
 
 export default Home;
+
