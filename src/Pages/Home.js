@@ -20,6 +20,7 @@ const Home = () => (
               </div>
               <img src={myImage} alt="" />
               
+              
 </div>
   
   
