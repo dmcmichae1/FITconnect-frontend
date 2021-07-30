@@ -1,6 +1,8 @@
 .topnav {
   background-color: #F68E5F;
   overflow: hidden;
+  position: relative;
+
 }
 
 /* Style the links inside the navigation bar */
@@ -35,6 +37,7 @@
   align-items: center;
   height: 50px;
   margin: 50px;
+
   
  
   
@@ -45,6 +48,17 @@
     margin: 70px;
   position: absolute;
   top: 50%;
+  right: 38%;
   
   
+  
+}
+
+
+.topnav img {
+position: absolute;
+width: 200px;
+left: 5%;
+margin-top: 0.3%;
+
 }

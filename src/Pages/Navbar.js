@@ -1,17 +1,20 @@
 import React from 'react';
+import myImage from '../image/fitconnect.png';
 
 const Navbar = () => {
 
 
     return (
-        <div class="topnav" id="myTopnav">
+        <div className="topnav" id="myTopnav">
+            <div id="myImage"></div>
+            <img src={myImage} alt="" />
         <a href="/trainer" >Trainer</a>
          <a href="/signup" >Signup</a>
            <a href="/login"  >Login</a>
          <a href="/home" >Home</a>
          
 
-         <h3>FITconnect</h3>
+         
 
        
          
