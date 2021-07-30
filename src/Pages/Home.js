@@ -8,7 +8,7 @@ const Home = () => (
 
   <div>
     <Nav />
-    hi I am home
+    
   </div>
 
   

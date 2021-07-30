@@ -9,6 +9,10 @@ const Navbar = () => {
          <a href="/signup" >Signup</a>
            <a href="/login"  >Login</a>
          <a href="/home" >Home</a>
+
+         <h3>FITconnect</h3>
+
+       
          
          
          
