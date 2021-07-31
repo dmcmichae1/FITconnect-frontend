@@ -6,8 +6,8 @@ const Login = () => (
     <h2>The Journey Starts Here</h2>
     <form action="/action_page.php">
       <div className="form-group">
-        <label for="email">Username:</label>
-        <input type="email" className="form-control" id="email" placeholder="Enter username" name="email"></input>
+        <label for="username">Username:</label>
+        <input type="username" className="form-control" id="username" placeholder="Enter username" name="username"></input>
       </div>
       <div className="form-group">
         <label for="pwd">Password:</label>
