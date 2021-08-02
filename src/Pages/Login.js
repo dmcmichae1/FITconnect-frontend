@@ -3,7 +3,7 @@ import React from 'react';
 import { useState } from 'react';
 import { withRouter } from 'react-router';
 
-const Login = ({history}) => {
+const Login = ({ history }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 

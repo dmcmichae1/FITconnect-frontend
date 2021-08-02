@@ -3,7 +3,7 @@ import React from 'react';
 import { useState } from "react";
 import { withRouter } from 'react-router';
 
-const NewArticle = ({ history }) => {
+const NewArticle = (props) => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
 
@@ -16,21 +16,14 @@ const NewArticle = ({ history }) => {
         body: body
       };
 
-      const token = localStorage.getItem('myJWT');
-
-      if (!token) {
-        //redirect
-        history.push('/login');
-      }
-
       const options = {
         headers: {
-          'Authorization': `Bearer ${token}`
+          'Authorization': `Bearer ${props.token}`
         }
       }
 
       axios.post('http://localhost:3000/articles', req, options).then(result => {
-        history.push('/articles')
+        props.history.push('/articles')
       }, err => {
         localStorage.removeItem('myJWT');
         history.push('/login');

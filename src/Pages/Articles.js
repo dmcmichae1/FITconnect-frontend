@@ -14,11 +14,11 @@ const Articles = () => {
   }, []);
 
   return (<div>
-    <h1>My services and Articles</h1>
+    <h1>Services</h1>
     <ul>
       {articles.map(articles =>
         <li key={articles.id}>
-          {articles.title}
+          <Link to={`/${articles.id}`}>{articles.title}</Link>
         </li>)}
     </ul>
     <Link to="/new">Create a Article</Link>

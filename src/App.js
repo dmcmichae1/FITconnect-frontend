@@ -7,6 +7,8 @@ import Login from './Pages/Login';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Articles from './Pages/Articles';
 import NewArticle from './Pages/NewArticle';
+import ArticlesDetails from './Pages/ArticlesDetails';
+import ArticleEdit from './Pages/ArticleEdit';
 
 
 
@@ -38,20 +40,26 @@ function App() {
               <Login />
             </Route>
 
-            <Route path="/new">
-              <NewArticle />
+            <PrivateRoute path="/new" component={NewArticle}>
+            </PrivateRoute>
+
+            <Route path="/:articleId">
+              <ArticlesDetails />
             </Route>
+
+            <PrivateRoute path="/:articleId/edit" component={ArticleEdit}>
+            </PrivateRoute>
 
             <Route path="/">
               <Articles />
             </Route>
           </Switch>
-        
-        
-        <Route path="/" component={Home} />
-        <Route path="/trainer" component={Trainer} />
-        <Route path="/signup" component={Signup} />
-        <Route path="/login" component={Login} />
+
+
+          <Route path="/" component={Home} />
+          <Route path="/trainer" component={Trainer} />
+          <Route path="/signup" component={Signup} />
+          <Route path="/login" component={Login} />
 
         </div>
       </Router>
