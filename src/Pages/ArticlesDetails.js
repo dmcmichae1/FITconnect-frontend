@@ -19,7 +19,7 @@ const ArticlesDetail = ({ history }) => {
     }, err => {
       history.push('/');
     });
-  }, [articlesId, history]);
+  }, [articleId, history]);
 
 
   return (

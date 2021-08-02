@@ -26,7 +26,7 @@ const NewArticle = (props) => {
         props.history.push('/articles')
       }, err => {
         localStorage.removeItem('myJWT');
-        history.push('/login');
+        props.history.push('/login');
       });
     }
   };

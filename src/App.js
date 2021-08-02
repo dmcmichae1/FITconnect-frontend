@@ -9,6 +9,8 @@ import Articles from './Pages/Articles';
 import NewArticle from './Pages/NewArticle';
 import ArticlesDetails from './Pages/ArticlesDetails';
 import ArticleEdit from './Pages/ArticleEdit';
+import PrivateRoute from './Pages/PrivateRoute';
+import myImage from '../src/image/fitconnect.png';
 
 
 
@@ -17,7 +19,8 @@ function App() {
   return (
     <div className='App'>
       <Router>
-        <div>
+        <div className="topnav" id="myTopnav">
+          <img src={myImage} alt="" />
           <nav>
             <ul>
               <li>
@@ -64,7 +67,7 @@ function App() {
         </div>
       </Router>
 
-    </div>
+    </div >
 
   );
 }

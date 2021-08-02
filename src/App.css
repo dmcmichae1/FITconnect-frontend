@@ -2,11 +2,11 @@
   background-color: #F68E5F;
   overflow: hidden;
   position: relative;
-
 }
 
 /* Style the links inside the navigation bar */
-.topnav a {
+
+.topnav li {
   float: right;
   display: block;
   color: #f2f2f2;
@@ -17,19 +17,17 @@
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
+
+.topnav li:hover {
   background-color: #F76C5E;
   color: black;
 }
 
-
-
-
 /* Hide the link that should open and close the topnav on small screens */
+
 .topnav .icon {
   display: none;
 }
-
 
 .btn {
   display: flex;
@@ -37,28 +35,18 @@
   align-items: center;
   height: 50px;
   margin: 50px;
-
-  
- 
-  
 }
 
-
 .btn-group {
-    margin: 70px;
+  margin: 70px;
   position: absolute;
   top: 0%;
   right: 38%;
-  
-  
-  
 }
 
-
 .topnav img {
-position: absolute;
-width: 200px;
-left: 5%;
-margin-top: 0.3%;
-
+  position: absolute;
+  width: 200px;
+  left: 5%;
+  margin-top: 0.3%;
 }

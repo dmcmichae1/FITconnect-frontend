@@ -10,6 +10,9 @@ const ArticleEdit = (props) => {
     description: ''
   });
 
+
+//const [history, setHistory] = useState([sadfasfa]);
+
   let { articleId } = useParams();
 
   const updateArticle = (e) => {
@@ -54,8 +57,7 @@ const ArticleEdit = (props) => {
       localStorage.removeItem('myJWT');
       props.history.push('/login');
     });
-  }
-};
+  };
 
 useEffect(() => {
   //load Article from API
@@ -67,7 +69,7 @@ useEffect(() => {
   }, err => {
     props.history.push('/');
   });
-}, [articlesId, history]);
+}, [articleId, props.history]);
 
 
 
