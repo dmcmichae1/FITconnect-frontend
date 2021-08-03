@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import Home from './Pages/Home';
-import Trainer from './Pages/Trainer';
-import Signup from './Pages/Signup';
+//import Trainer from './Pages/Trainer';
+import SignUp from './Pages/Signup';
 import Login from './Pages/Login';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Articles from './Pages/Articles';
@@ -10,7 +10,7 @@ import NewArticle from './Pages/NewArticle';
 import ArticlesDetails from './Pages/ArticlesDetails';
 import ArticleEdit from './Pages/ArticleEdit';
 import PrivateRoute from './Pages/PrivateRoute';
-import myImage from '../src/image/fitconnect.png';
+// import myImage from '../src/image/fitconnect.png';
 
 
 
@@ -20,20 +20,19 @@ function App() {
     <div className='App'>
       <Router>
         <div className="topnav" id="myTopnav">
-          <img src={myImage} alt="" />
           <nav>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/" component={Home}>Home</Link>
               </li>
               <li>
                 <Link to="/login">Login</Link>
               </li>
               <li>
-                <Link to="/signup">Signup</Link>
+                <Link to="/signup" component={SignUp}>Signup</Link>
               </li>
               <li>
-                <Link to="/trainer">Trainer</Link>
+                <Link to="/trainer" component={Articles}>Trainer</Link>
               </li>
             </ul>
           </nav>
@@ -53,16 +52,20 @@ function App() {
             <PrivateRoute path="/:articleId/edit" component={ArticleEdit}>
             </PrivateRoute>
 
-            <Route path="/">
+            <Route path="/articles">
               <Articles />
+            </Route>
+
+            <Route path="/">
+              <Home />
             </Route>
           </Switch>
 
-
+{/* 
           <Route path="/" component={Home} />
           <Route path="/trainer" component={Trainer} />
           <Route path="/signup" component={Signup} />
-          <Route path="/login" component={Login} />
+          <Route path="/login" component={Login} /> */}
 
         </div>
       </Router>

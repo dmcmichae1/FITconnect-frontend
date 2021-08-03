@@ -3,7 +3,7 @@ import React from 'react';
 import { useState } from 'react';
 import { withRouter } from 'react-router';
 
-const Login = ({ history }) => {
+const Login = ({history}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -20,7 +20,7 @@ const Login = ({ history }) => {
       axios.post('http://localhost:3000/trainers/login', req).then(result => {
         const token = result.data.jwt;
         localStorage.setItem('myJWT', token);
-        history.push('/trainers');
+        history.push('/articles');
 
         console.log(result.data);
 

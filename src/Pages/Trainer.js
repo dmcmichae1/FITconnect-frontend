@@ -1,13 +1,13 @@
-import React from 'react';
-import Nav from './Navbar';
+// import React from 'react';
+// import Nav from './Navbar';
 
-const Trainer = () => (
+// const Trainer = () => (
 
-  <div>
-    <Nav />
-    hi I am Trainer
-  </div>
+//   <div>
+//     <Nav />
+//     hi I am Trainer
+//   </div>
 
-);
+// );
 
-export default Trainer;
+// export default Trainer;
