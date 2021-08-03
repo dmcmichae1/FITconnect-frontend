@@ -52,7 +52,7 @@ const ArticleEdit = (props) => {
     const url = 'http://localhost:3000/articles/' + articles.id;
     axios.delete(url, options).then(result => {
       console.log(result.data);
-      props.history.push('/')
+      props.history.push('/articles')
     }, err => {
       localStorage.removeItem('myJWT');
       props.history.push('/login');
