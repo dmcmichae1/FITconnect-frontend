@@ -12,7 +12,7 @@ const Articles = () => {
       setArticles(result.data.articles);
       console.log(articles)
     });
-  }, []);
+  }, [articles]);
 
   return (
     <div>
