@@ -23,51 +23,46 @@ function App() {
           <nav>
             <ul>
               <li>
-                <Link to="/" component={Home}>Home</Link>
+                <Link to="/">Home</Link>
               </li>
               <li>
                 <Link to="/login">Login</Link>
               </li>
               <li>
-                <Link to="/signup" component={SignUp}>Signup</Link>
+                <Link to="/signup">Signup</Link>
               </li>
               <li>
-                <Link to="/trainer" component={Articles}>Trainer</Link>
+                <Link to="/trainer">Trainer</Link>
               </li>
             </ul>
           </nav>
 
-          <Switch>
-            <Route path="/login">
-              <Login />
-            </Route>
-
-            <PrivateRoute path="/new" component={NewArticle}>
-            </PrivateRoute>
-
-            <Route path="/:articleId">
-              <ArticlesDetails />
-            </Route>
-
-            <PrivateRoute path="/:articleId/edit" component={ArticleEdit}>
-            </PrivateRoute>
-
-            <Route path="/articles">
-              <Articles />
-            </Route>
-
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
-
-{/* 
-          <Route path="/" component={Home} />
-          <Route path="/trainer" component={Trainer} />
-          <Route path="/signup" component={Signup} />
-          <Route path="/login" component={Login} /> */}
-
         </div>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+
+          <Route exact path="/login" component={Login}>
+            <Login />
+          </Route>
+
+          <PrivateRoute exact path="/new" component={NewArticle}>
+          </PrivateRoute>
+
+          <Route exact path="/articles" component={Articles}>
+            <Articles />
+          </Route>
+
+          <PrivateRoute exact path="/:edit/articleId" component={ArticleEdit}>
+          </PrivateRoute>
+
+          <Route exact path="/:articleId">
+            <ArticlesDetails />
+          </Route>
+
+        </Switch>
+
       </Router>
 
     </div >
