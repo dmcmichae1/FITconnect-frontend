@@ -52,10 +52,13 @@ function App() {
             <Login />
           </Route>
 
+          <Route exact path="/signup" component={SignUp}>
+            <SignUp />
+          </Route>
+
           <Route exact path="/trainer" component={Trainer}>
             <Trainer />
           </Route>
-
 
           <PrivateRoute exact path="/new" component={NewArticle}>
           </PrivateRoute>

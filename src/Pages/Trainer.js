@@ -2,6 +2,7 @@
 import React from 'react';
 import Nav from './Navbar';
 import { useEffect, useState } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
  const Trainer = () => {
      const [trainer, setTrainer] = useState([]);
@@ -17,25 +18,16 @@ import { useEffect, useState } from 'react';
 
      return (<div>
          <h1>Our Trainers</h1>
+         <Nav />
          <ul>
             { trainer.map(trainer =>
-            <li key={trainer.id}>
-                {trainer.firstName}
-                    
-            </li>
-         )}
-         </ul>
-         <Nav />
+                <li key={trainer.id}>
+                    <Link to={`/${trainer.id}`}>{trainer.name}</Link>
+                </li>
+                 )}
+             </ul>
 
-     </div>);
-       
-    } 
-       
-      
-     
+    </div>);
+ }
 
-  
-
- 
-
-export default Trainer;
+ export default withRouter(Trainer);
