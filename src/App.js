@@ -10,7 +10,7 @@ import NewArticle from './Pages/NewArticle';
 import ArticlesDetails from './Pages/ArticlesDetails';
 import ArticleEdit from './Pages/ArticleEdit';
 import PrivateRoute from './Pages/PrivateRoute';
- import myImage from '../src/image/fitconnect.png';
+import myImage from '../src/image/fitconnect.png';
 
 
 
@@ -20,27 +20,25 @@ function App() {
     <div className='App'>
       <Router>
         <div className="topnav" id="myTopnav">
-        <nav> 
-          
-          <ul>
-          <img src={myImage} alt="" />
-            <li>
-            
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link to="/signup">Signup</Link>
-            </li>
-            <li>
-              <Link to="/trainer">Trainer</Link>
-            </li>
-          </ul>
-        </nav>
+          <nav>
 
-         
+            <ul>
+              <img src={myImage} alt="" />
+              <li>
+
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
+              <li>
+                <Link to="/signup">Signup</Link>
+              </li>
+              <li>
+                <Link to="/trainer">Trainer</Link>
+              </li>
+            </ul>
+          </nav>
 
         </div>
         <Switch>
