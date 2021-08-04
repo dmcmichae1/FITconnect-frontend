@@ -29,20 +29,7 @@
   display: none;
 }
 
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  margin: 50px;
-}
 
-.btn-group {
-  margin: 70px;
-  position: absolute;
-  top: 0%;
-  right: 38%;
-}
 
 .topnav img {
   position: absolute;
