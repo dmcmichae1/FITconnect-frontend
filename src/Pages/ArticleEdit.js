@@ -11,8 +11,6 @@ const ArticleEdit = (props) => {
   });
 
 
-//const [history, setHistory] = useState([sadfasfa]);
-
   let { articleId } = useParams();
 
   const updateArticle = (e) => {
@@ -39,6 +37,7 @@ const ArticleEdit = (props) => {
       });
     }
   };
+
 
   const deleteArticle = () => {
     const token = localStorage.getItem('myJWT');

@@ -24,10 +24,10 @@ const SignUp = ({ history }) => {
 
       };
 
-      axios.post('http://localhost:3000/trainers/signup', req).then(result => {
+      axios.post('http://localhost:3000/trainers', req).then(result => {
         const token = result.data.jwt;
         localStorage.setItem('myJWT', token);
-        history.push('/login');
+        history.push('/trainer');
 
         console.log(result.data);
 

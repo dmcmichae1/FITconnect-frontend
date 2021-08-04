@@ -15,7 +15,7 @@ const ArticlesDetail = ({ history }) => {
 
     axios.get(url).then(result => {
       console.log(result);
-      setArticles(result.data);
+      setArticles(result.data.articleId);
     }, err => {
       history.push('/');
     });
@@ -29,7 +29,7 @@ const ArticlesDetail = ({ history }) => {
       <p> {articles.body} </p>
 
       <Link to='/'>Articles</Link> |
-      <Link to={`/${articles.id}/edit`}>Edit</Link>
+      <Link to={`/${articles.articleId}/edit`}>Edit</Link>
     </div>
   );
 };

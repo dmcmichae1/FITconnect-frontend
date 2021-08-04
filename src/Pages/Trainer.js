@@ -9,9 +9,8 @@ const Trainer = () => {
 
     useEffect(() => {
         axios.get('http://localhost:3000/trainer').then(result => {
-
             setTrainer(result.data.trainer);
-
+            console.log(trainer)
         });
     }, [trainer]);
 
@@ -21,8 +20,8 @@ const Trainer = () => {
         <Nav />
         <ul>
             {trainer.map(trainer =>
-                <li key={trainer.id}>
-                    <Link to={`/${trainer.id}`}>{trainer.name}</Link>
+                <li key={trainer.trainerId}>
+                    <Link to={`/${trainer.trainerId}`}>{trainer.firstName}</Link>
                 </li>
             )}
         </ul>

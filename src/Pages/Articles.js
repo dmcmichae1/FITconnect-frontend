@@ -14,21 +14,22 @@ const Articles = () => {
     });
   }, [articles]);
 
-  return (
-    <div>
-      <h1>Services</h1>
+return (
+  <div>
+    <h1>Services</h1>
 
-      <ul>
+    <ul>
 
-        {articles.map(article =>
-          <li key={article.id}>
-            <Link to={`/${article.id}`}>{article.title}</Link>
-          </li>
+      {articles.map(article =>
+        <li key={article.id}>
+          <Link to={`/${article.id}`}>{article.title}</Link>
+        </li>
 
-        )}
-      </ul>
-      <Link to="/new">Create a Article</Link>
-    </div>);
+
+      )}
+    </ul>
+    <Link to="/new">Create a Article</Link>
+  </div>);
 }
 
 export default withRouter(Articles);
