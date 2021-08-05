@@ -12,7 +12,7 @@ const Articles = () => {
       setArticles(result.data.articles);
       console.log(articles)
     });
-  }, [articles]);
+  }, []);
 
 return (
   <div>
@@ -21,8 +21,8 @@ return (
     <ul>
 
       {articles.map(article =>
-        <li key={article.id}>
-          <Link to={`/${article.id}`}>{article.title}</Link>
+        <li key={article.articleId}>
+          <Link to={`/${article.articleId}`}>{article.title}</Link>
         </li>
 
 

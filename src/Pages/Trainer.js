@@ -8,7 +8,7 @@ const Trainer = () => {
     const [trainer, setTrainer] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/trainer').then(result => {
+        axios.get('http://localhost:3000/trainers').then(result => {
             setTrainer(result.data.trainer);
             console.log(trainer)
         });

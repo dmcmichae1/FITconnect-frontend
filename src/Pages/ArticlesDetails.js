@@ -10,14 +10,16 @@ const ArticlesDetail = ({ history }) => {
   let { articleId } = useParams();
 
   useEffect(() => {
+    console.log(articleId)
     //load Article from API
     const url = `http://localhost:3000/articles/${articleId}`;
 
     axios.get(url).then(result => {
       console.log(result);
-      setArticles(result.data.articleId);
+      setArticles(result.data);
     }, err => {
       history.push('/');
+      console.log(err)
     });
   }, [articleId, history]);
 
