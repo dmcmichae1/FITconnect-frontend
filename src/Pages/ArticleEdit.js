@@ -28,10 +28,10 @@ const ArticleEdit = (props) => {
         }
       }
 
-      const url = 'http://localhost:3000/articles/' + articles.id;
+      const url = 'http://localhost:3000/articles/' + articles.articleId;
       axios.put(url, req, options).then(result => {
         console.log(result.data);
-        props.history.push(`/${articles.id}`)
+        props.history.push(`/${articles.articleId}`)
       }, err => {
         localStorage.removeItem('myJWT');
         props.history.push('/login');
@@ -49,7 +49,7 @@ const ArticleEdit = (props) => {
       }
     }
 
-    const url = 'http://localhost:3000/articles/' + articles.id;
+    const url = 'http://localhost:3000/articles/' + articles.articleId;
     axios.delete(url, options).then(result => {
       console.log(result.data);
       props.history.push('/articles')
@@ -91,7 +91,7 @@ return (
         })} />
       <button type="submit">Update!</button>
     </form>
-    <Link to={`/${articles.id}`}> Articles </Link>
+    <Link to={`/${articles.articleId}`}> Articles </Link>
 
     <br></br>
     <button onClick={deleteArticle}>Delete Article</button>
