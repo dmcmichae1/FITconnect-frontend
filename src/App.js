@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Home from './Pages/Home';
-import Trainer from './Pages/Trainer';
+import Trainers from './Pages/Trainer';
 import SignUp from './Pages/Signup';
 import Login from './Pages/Login';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
@@ -35,7 +35,7 @@ function App() {
                 <Link to="/signup">Signup</Link>
               </li>
               <li>
-                <Link to="/trainer">Trainer</Link>
+                <Link to="/trainers">Trainers</Link>
               </li>
             </ul>
           </nav>
@@ -54,8 +54,8 @@ function App() {
             <SignUp />
           </Route>
 
-          <Route exact path="/trainer" component={Trainer}>
-            <Trainer />
+          <Route exact path="/trainers" component={Trainers}>
+            <Trainers />
           </Route>
 
           <PrivateRoute exact path="/new" component={NewArticle}>
