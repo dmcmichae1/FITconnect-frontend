@@ -12,6 +12,7 @@ const ArticleEdit = (props) => {
 
 
   let { articleId } = useParams();
+  console.log({articleId});
 
   const updateArticle = (e) => {
     e.preventDefault();
@@ -88,7 +89,7 @@ return (
           ...articles,
           description: e.target.value
         })} />
-      <button>Update!</button>
+      <button type="submit">Update!</button>
     </form>
     <Link to={`/${articles.id}`}> Articles </Link>
 
