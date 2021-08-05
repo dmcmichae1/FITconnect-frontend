@@ -4,24 +4,24 @@ import Nav from './Navbar';
 import { useEffect, useState } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-const Trainer = () => {
-    const [trainer, setTrainer] = useState([]);
+const Trainers = () => {
+    const [trainers, setTrainers] = useState([]);
 
     useEffect(() => {
         axios.get('http://localhost:3000/trainers').then(result => {
-            setTrainer(result.data.trainer);
-            console.log(trainer)
+            setTrainers(result.data.trainers);
+            console.log(trainers)
         });
-    }, [trainer]);
+    }, []);
 
 
     return (<div>
         <h1>Our Trainers</h1>
         <Nav />
         <ul>
-            {trainer.map(trainer =>
-                <li key={trainer.trainerId}>
-                    <Link to={`/${trainer.trainerId}`}>{trainer.firstName}</Link>
+            {trainers.map(trainers =>
+                <li key={trainers.trainerId}>
+                    <Link to={`/${trainers.trainerId}`}>{trainers.firstName}</Link>
                 </li>
             )}
         </ul>
@@ -29,4 +29,4 @@ const Trainer = () => {
     </div>);
 }
 
-export default withRouter(Trainer);
+export default withRouter(Trainers);
