@@ -32,6 +32,7 @@ const ArticleEdit = (props) => {
       const url = 'http://localhost:3000/articles/' + articles.articleId;
       axios.put(url, req, options).then(result => {
         props.history.push(`/${articles.articleId}`)
+        props.history.push("/articles")
       }, err => {
         localStorage.removeItem('myJWT');
         props.history.push('/login');
