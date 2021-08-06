@@ -25,12 +25,7 @@ const SignUp = ({ history }) => {
       };
 
       axios.post('http://localhost:3000/trainers/signup', req).then(result => {
-        // const token = result.data.jwt;
-        // localStorage.setItem('myJWT', token);
-        console.log(result.data);
         history.push('/login');
-
-
       })
     }
   };

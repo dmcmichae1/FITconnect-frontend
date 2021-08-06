@@ -31,7 +31,6 @@ const ArticleEdit = (props) => {
 
       const url = 'http://localhost:3000/articles/' + articles.articleId;
       axios.put(url, req, options).then(result => {
-        //console.log(result.data);
         props.history.push(`/${articles.articleId}`)
       }, err => {
         localStorage.removeItem('myJWT');
@@ -51,7 +50,6 @@ const ArticleEdit = (props) => {
 
     const url = 'http://localhost:3000/articles/' + articles.articleId;
     axios.delete(url, options).then(result => {
-      //console.log(result.data);
       props.history.push('/articles')
     }, err => {
       localStorage.removeItem('myJWT');
@@ -64,7 +62,6 @@ const ArticleEdit = (props) => {
     const url = `http://localhost:3000/articles/${articleId}`;
 
     axios.get(url).then(result => {
-      //console.log(result);
       setArticles(result.data);
     }, err => {
       props.history.push('/');

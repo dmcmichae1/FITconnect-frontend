@@ -16,11 +16,9 @@ const ArticlesDetail = ({ history }) => {
     const url = `http://localhost:3000/articles/${articleId}`;
 
     axios.get(url).then(result => {
-      console.log(result);
       setArticles(result.data);
     }, err => {
       history.push('/');
-      console.log(err)
     });
   }, [articleId, history]);
 

@@ -23,8 +23,6 @@ const Login = ({ history }) => {
         localStorage.setItem('myJWT', token);
         history.push('/articles');
 
-        console.log(result.data);
-
       })
     }
   };

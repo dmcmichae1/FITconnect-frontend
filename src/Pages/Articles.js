@@ -8,9 +8,7 @@ const Articles = () => {
 
   useEffect(() => {
     axios.get('http://localhost:3000/articles').then(result => {
-      console.log(result);
       setArticles(result.data.articles);
-      console.log(articles)
     });
   }, []);
 

@@ -11,7 +11,6 @@ const Trainers = () => {
     useEffect(() => {
         axios.get('http://localhost:3000/trainers').then(result => {
             setTrainers(result.data.trainers);
-            console.log(trainers)
         });
     }, []);
 
