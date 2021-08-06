@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { withRouter } from "react-router";
 import { Link, useParams } from "react-router-dom";
+import './ArticlesDetails.css';
 
 const ArticlesDetail = ({ history }) => {
 
@@ -25,13 +26,13 @@ const ArticlesDetail = ({ history }) => {
 
 
   return (
-    <div>
-      <h1>Services</h1>
-      <h2>{articles.title}</h2>
+    <div className="css">
+      {/* <h1>Services</h1> */}
+      <h3>{articles.title}</h3>
       <p> {articles.body} </p>
 
       <Link to='/'>Articles</Link> |
-      <Link to={`/${articles.articleId}/edit`}>Edit</Link>
+      <Link to={`/edit/${articles.articleId}`}>Edit</Link>
     </div>
   );
 };

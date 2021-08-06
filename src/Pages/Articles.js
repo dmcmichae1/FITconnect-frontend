@@ -15,8 +15,8 @@ const Articles = () => {
   }, []);
 
 return (
-  <div>
-    <h1>Services</h1>
+  <div className="css">
+    <h3>Services</h3>
 
     <ul>
 

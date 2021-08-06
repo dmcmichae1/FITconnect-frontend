@@ -15,7 +15,6 @@ const Home = () => (
     <h1>Pain is weakness leaving the body!</h1>
 
     <img src={myImage} alt="" />
-   
 
   </div>
 
