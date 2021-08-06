@@ -14,16 +14,13 @@ const Articles = () => {
 
 return (
   <div className="css">
-    <h3>Services</h3>
+    <h3>Articles</h3>
 
     <ul>
-
       {articles.map(article =>
         <li key={article.articleId}>
           <Link to={`/${article.articleId}`}>{article.title}</Link>
         </li>
-
-
       )}
     </ul>
     <Link to="/new">Create a Article</Link>

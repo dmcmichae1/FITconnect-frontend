@@ -15,10 +15,11 @@ const Login = ({ history }) => {
     if (username !== '' && password !== '') {
       const req = {
         username: username,
-        password: password
+        password: password,
       };
 
       axios.post('http://localhost:3000/trainers/login', req).then(result => {
+        console.log(result)
         const token = result.data.jwt;
         localStorage.setItem('myJWT', token);
         history.push('/articles');
