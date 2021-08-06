@@ -9,7 +9,7 @@ const ArticleEdit = (props) => {
 
   const [articles, setArticles] = useState({
     title: '',
-    description: ''
+    body: ''
   });
 
   let { articleId } = useParams();
@@ -76,7 +76,7 @@ const ArticleEdit = (props) => {
   return (
     <div className="css">
       <form onSubmit={updateArticle}>
-        <h1>Edit {articles.title}</h1>
+        <h2>Edit {articles.title}</h2>
         <label>Title</label>
         <input type="text" name="title" onChange={e =>
           setArticles({
