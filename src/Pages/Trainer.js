@@ -3,6 +3,7 @@ import React from 'react';
 import Nav from './Navbar';
 import { useEffect, useState } from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import './Trainer.css';
 
 const Trainers = () => {
     const [trainers, setTrainers] = useState([]);
@@ -15,8 +16,8 @@ const Trainers = () => {
     }, []);
 
 
-    return (<div>
-        <h1>Our Trainers</h1>
+    return (<div className="css">
+        <h3>Our Trainers</h3>
         <Nav />
         <ul>
             {trainers.map(trainers =>

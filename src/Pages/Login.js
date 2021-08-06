@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { withRouter } from 'react-router';
 import './login.css'
 
-const Login = ({history}) => {
+const Login = ({ history }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -28,13 +28,9 @@ const Login = ({history}) => {
       })
     }
   };
- 
+
   return (<div className="login">
 
-<h2>Get ready to feel the burn!</h2>
-    
-   
-   
     <form onSubmit={signIn} action="/action_page.php">
       <div className="form-group">
         <label for="username">Username:</label>

@@ -65,12 +65,12 @@ function App() {
             <Articles />
           </Route>
 
-          <PrivateRoute exact path="/:edit/articleId" component={ArticleEdit}>
-          </PrivateRoute>
-
           <Route exact path="/:articleId" component={ArticlesDetails}>
             <ArticlesDetails />
           </Route>
+
+          <PrivateRoute exact path="/:edit/articleId" component={ArticleEdit}>
+          </PrivateRoute>
 
         </Switch>
 

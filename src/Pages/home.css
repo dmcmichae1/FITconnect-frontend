@@ -3,11 +3,11 @@ img {
 }
 
 h1 {
-    position: absolute;
+  position: absolute;
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
-  font-size: 55px;
+  font-size: 45px;
 }
 
