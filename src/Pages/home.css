@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+
 img {
     width: 100%;
 }
@@ -7,7 +10,8 @@ h1 {
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: black;
   font-size: 45px;
+  font-family: 'Montserrat', cursive;
 }
+
 

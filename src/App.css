@@ -1,3 +1,5 @@
+
+
 .topnav {
   background-color: #F68E5F;
   overflow: hidden;
@@ -19,7 +21,7 @@
 /* Change the color of links on hover */
 
 .topnav li:hover {
-  background-color: #F76C5E;
+  background-color: whitesmoke;
   color: black;
 }
 
@@ -37,3 +39,4 @@
   left: 5%;
   margin-top: 0.3%;
 }
+

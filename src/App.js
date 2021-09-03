@@ -21,11 +21,9 @@ function App() {
       <Router>
         <div className="topnav" id="myTopnav">
           <nav>
-
             <ul>
               <img src={myImage} alt="" />
               <li>
-
                 <Link to="/">Home</Link>
               </li>
               <li>

@@ -9,7 +9,7 @@ const Home = () => (
 
   <div>
     <Nav />
-    <h1>Pain is weakness leaving the body!</h1>
+  <h1 className="font-semibold text-3xl lg:text-5xl">Connect. Move. Grow. </h1>
     <img src={myImage} alt="" />
   </div>
 
