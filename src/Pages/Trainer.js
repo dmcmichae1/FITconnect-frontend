@@ -15,10 +15,10 @@ const Trainers = () => {
     }, []);
 
 
-    return (<div className="css">
+    return (<div className="train">
         <h3>Our Trainers</h3>
         <Nav />
-        <ul>
+        <ul id="otis">
             {trainers.map(trainers =>
                 <li key={trainers.trainerId}>
                     <Link to={`/${trainers.trainerId}`}>{trainers.firstName}</Link>

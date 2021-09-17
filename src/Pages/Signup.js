@@ -32,10 +32,10 @@ const SignUp = ({ history }) => {
 
 
 
-  return (<div className="SignUp">
+  return (<div className="login">
 
 
-    <h2>Signup bro!</h2>
+    <h2>Signup</h2>
     <form onSubmit={SignUp} action="/action_page.php">
       <div className="form-group">
         <label for="firstName">First Name:</label>

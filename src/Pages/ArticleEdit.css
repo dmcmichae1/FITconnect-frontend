@@ -1,5 +1,11 @@
 .css {
   text-align: center;
   top: 40%;
-  border: 3px solid orange;
+  position: absolute;
+  background-color: #E5DACE;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 14px 20px;
+  
 }

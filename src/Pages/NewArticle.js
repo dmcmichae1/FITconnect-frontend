@@ -31,15 +31,17 @@ const NewArticle = (props) => {
     }
   };
 
-  return (<div>
-    <form onSubmit={createArticle}>
-      <h1>Create a Article</h1>
+  return (<div >
+    <h1>Create a Article</h1>
+    <div className="css"><form onSubmit={createArticle}>
       <label>Title</label>
       <input type="text" name="title" onChange={e => setTitle(e.target.value)} />
+      <br></br>
       <label>Description</label>
       <input type="text" name="body" onChange={e => setBody(e.target.value)} />
       <button>Create!</button>
     </form>
+    </div>
   </div>);
 };
 
