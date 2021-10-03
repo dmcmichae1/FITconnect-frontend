@@ -21,9 +21,10 @@ const NewArticle = (props) => {
           'Authorization': `Bearer ${props.token}`
         }
       }
-
+console.log('posting')
       axios.post('http://localhost:3000/articles', req, options).then(result => {
-        props.history.push('/articles')
+      console.log(result);  
+      props.history.push('/articles')
       }, err => {
         localStorage.removeItem('myJWT');
         props.history.push('/login');
