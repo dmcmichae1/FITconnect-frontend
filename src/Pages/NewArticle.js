@@ -13,7 +13,8 @@ const NewArticle = (props) => {
     if (title !== '' && body !== '') {
       const req = {
         title: title,
-        body: body
+        body: body,
+        trainerId: localStorage.getItem('trainerId')
       };
 
       const options = {

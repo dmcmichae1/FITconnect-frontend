@@ -22,6 +22,7 @@ const Login = ({ history }) => {
         console.log(result)
         const token = result.data.jwt;
         localStorage.setItem('myJWT', token);
+        localStorage.setItem('trainerId', result.data.trainerId)
         history.push('/articles');
 
       })
